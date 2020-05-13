@@ -1,4 +1,4 @@
-package main;
+package commands;
 
 public interface Commands {
 
@@ -7,6 +7,7 @@ public interface Commands {
     int LOGIN = 1;
     int REGISTER = 2;
     int PRINT_ALL_USERS = 3;
+    int IMPORT_USERS = 4;
 
     // user commands
     int LOGOUT = 0;
@@ -25,6 +26,7 @@ public interface Commands {
         System.out.println("Input " + LOGIN + " for LOGIN.");
         System.out.println("Input " + REGISTER + " for REGISTER.");
         System.out.println("Input " + PRINT_ALL_USERS + " for PRINT_ALL_USERS.");
+        System.out.println("Input " + IMPORT_USERS + " for IMPORT_USERS.");
     }
 
     static void printUserCommands() {

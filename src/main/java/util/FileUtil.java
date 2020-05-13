@@ -11,8 +11,8 @@ import java.util.Map;
 
 public class FileUtil {
 
-    private static final String AD_FILE_PATH = "src\\util\\files\\ads.info";
-    private static final String USER_FILE_PATH = "src\\util\\files\\users.info";
+    private static final String AD_FILE_PATH = "src\\main\\resources\\ads.info";
+    private static final String USER_FILE_PATH = "src\\main\\resources\\users.info";
 
     public static void serializeAdList(List<Ad> adList) {
         File adListFile = new File(AD_FILE_PATH);
