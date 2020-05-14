@@ -8,7 +8,7 @@ public interface Commands {
     int REGISTER = 2;
     int PRINT_ALL_USERS = 3;
     int IMPORT_USERS = 4;
-    int EXPORT_MY_ADS = 5;
+    int EXPORT_ADS = 5;
 
     // user commands
     int LOGOUT = 0;
@@ -29,7 +29,7 @@ public interface Commands {
         System.out.println("Input " + REGISTER + " for REGISTER.");
         System.out.println("Input " + PRINT_ALL_USERS + " for PRINT_ALL_USERS.");
         System.out.println("Input " + IMPORT_USERS + " for IMPORT_USERS.");
-        System.out.println("Input " + EXPORT_MY_ADS + " for EXPORT_MY_ADS.");
+        System.out.println("Input " + EXPORT_ADS + " for EXPORT_ADS.");
     }
 
     static void printUserCommands() {

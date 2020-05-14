@@ -51,7 +51,7 @@ public class AdMain implements Commands {
                 case PRINT_ALL_USERS:
                     STORAGE.printAllUsers();
                     break;
-                case EXPORT_MY_ADS:
+                case EXPORT_ADS:
                     if (STORAGE.isAdsEmpty()) {
                         System.out.println("Ads list is EMPTY. Please, add AD first.");
                         break;
