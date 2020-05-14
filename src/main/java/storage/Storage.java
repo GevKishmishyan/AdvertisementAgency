@@ -28,7 +28,7 @@ public interface Storage {
 
     void deleteAllAdsByUser(User user) throws IOException;
 
-    void deleteAdByTitle(String title) throws IOException;
+    void deleteAdByTitle(String title, User currentUser) throws IOException;
 
 
 }

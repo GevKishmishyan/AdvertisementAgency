@@ -7,7 +7,6 @@ import model.User;
 import storage.Storage;
 import util.FileUtil;
 
-import java.io.IOException;
 import java.util.*;
 
 public class StorageImpl implements Storage {
@@ -45,8 +44,18 @@ public class StorageImpl implements Storage {
         FileUtil.serializeAdList(ads);
     }
 
+
     public User getUserByPhoneNumber(String phoneNumber) {
         return users.get(phoneNumber);
+    }
+
+    public Ad getAdByTitleStr(String title) {
+        for (Ad ad1 : ads) {
+            if (ad1.getTitle().equals(title)) {
+                return ad1;
+            }
+        }
+        return null;
     }
 
     private Ad getAdByTitle(Ad ad) {
@@ -135,10 +144,10 @@ public class StorageImpl implements Storage {
     }
 
     @Override
-    public void deleteAdByTitle(String title) {
+    public void deleteAdByTitle(String title, User currentUser) {
         for (int i = 0; i < ads.size(); i++) {
             Ad ad = ads.get(i);
-            if (ad.getTitle().equals(title)) {
+            if (ad.getTitle().equals(title) && ad.getAuthor().equals(currentUser)) {
                 ads.remove(i);
             }
         }
