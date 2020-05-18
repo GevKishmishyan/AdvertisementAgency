@@ -153,4 +153,8 @@ public class StorageImpl implements Storage {
         }
         FileUtil.serializeAdList(ads);
     }
+
+    public List<Ad> getAds() {
+        return ads;
+    }
 }
